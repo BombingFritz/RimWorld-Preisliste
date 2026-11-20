@@ -724,3 +724,16 @@ header h1 {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--scrollbar-thumb-hover);
 }
+
+
+/* Anleitung (deutsch) */
+.guide { line-height: 1.6; color: var(--text); }
+.guide section { margin-bottom: 28px; }
+.guide h2 { color: var(--text-strong); border-bottom: 2px solid var(--border-tab-active); padding-bottom: 6px; margin-bottom: 12px; }
+.guide ul { padding-left: 22px; }
+.guide li { margin-bottom: 6px; }
+.guide code { color: var(--text-code); background: var(--bg-surface-soft); border: 1px solid var(--border-soft); border-radius: 4px; padding: 1px 5px; white-space: nowrap; }
+.guide .guide-tldr { background: var(--bg-surface-soft); border-left: 4px solid var(--border-accent); padding: 12px 18px; border-radius: 6px; }
+.guide .guide-table { width: 100%; margin: 8px 0 12px; }
+.guide .guide-table td, .guide .guide-table th { padding: 8px 12px; text-align: left; vertical-align: top; }
+@media (max-width: 600px) { .guide code { white-space: normal; } }
