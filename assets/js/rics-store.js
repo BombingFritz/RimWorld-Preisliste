@@ -483,22 +483,15 @@ processRacesData(racesObject) {
         const tbody = document.getElementById('items-tbody');
         const items = this.filteredData.items;
         if (items.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:40px;">No items found</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:40px;">Keine Ware gefunden</td></tr>';
             return;
         }
+        // Angepasst für den Stream (20.11.2026): deutscher Kaufbefehl mit $, Preis auch in Zuschauzeit (300 Pfennig je Stunde).
         tbody.innerHTML = items.map(item => `
             <tr>
-                <td>
-                    <div class="item-name">${this.escapeHtml(item.name)}</div>
-                    <span class="metadata">
-                        ${this.escapeHtml(item.defName)}<br>
-                        From ${this.escapeHtml(this.getModDisplayName(item.mod))}<br>
-                        Usage: !buy ${this.escapeHtml(item.name)} or !buy ${this.escapeHtml(item.defName)}
-                        ${this.getUsageTypes(item)}
-                    </span>
-                </td>
-                <td class="no-wrap"><strong>${item.price}</strong></td>
-                <td>${this.escapeHtml(item.category)}</td>
+                <td><div class="item-name">${this.escapeHtml(item.name)}</div></td>
+                <td class="no-wrap"><strong>${item.price}</strong><br><span class="metadata">${this.watchTime(item.price)}</span></td>
+                <td class="no-wrap"><code>$${this.escapeHtml(item.name)}</code></td>
                 <td class="no-wrap">${item.quantityLimit}</td>
             </tr>
         `).join('');
@@ -829,6 +822,13 @@ processRacesData(racesObject) {
         }).join('');
     }
     // ==================== HELPERS ====================
+    /** Preis in Zuschauzeit: 300 Pfennig je Stunde (RICS: 10 Pfennig alle 2 Minuten). */
+    watchTime(price) {
+        const min = Math.round(Number(price) / 300 * 60);
+        if (!isFinite(min)) return '';
+        return min < 60 ? `≈ ${Math.max(1, min)} min Zuschauen` : `≈ ${(min / 60).toLocaleString('de-DE', { maximumFractionDigits: 1 })} h Zuschauen`;
+    }
+
     getUsageTypes(item) {
         const types = [];
         if (item.isUsable) types.push('Usable');
