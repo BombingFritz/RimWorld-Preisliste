@@ -1,3 +1,19 @@
+# RimWorld im Stream – Anleitung und Preise
+
+Öffentliche Seite für die Zuschauer: Anleitung „So spielst du mit“ (deutsch) und die Preisliste von RICS. Fork von [ekudram/RICS-Pricelist](https://github.com/ekudram/RICS-Pricelist) (MIT). Gehört zur Mod [TwitchCompanion_RimWorld](https://github.com/BombingFritz/TwitchCompanion_RimWorld) (Feature-Issue #9).
+
+## Pflege
+1. **GitHub Pages einschalten** (einmalig): Settings → Pages → Source „Deploy from a branch“ → Branch `main`, Ordner `/ (root)`. Adresse danach: `https://bombingfritz.github.io/RimWorld-Preisliste/`.
+2. **In RICS die Adresse eintragen**, damit `!purchaselist` hierher verlinkt (RICS-Einstellung `priceListUrl`).
+3. **Daten aktualisieren**, wenn sich Preise ändern (z. B. nach „Preise nach Zuschauzeit setzen“ in der Mod): die JSON-Dateien aus
+   `%USERPROFILE%\AppData\LocalLow\Ludeon Studios\RimWorld by Ludeon Studios\Config\CAP_ChatInteractive`
+   nach `data/` kopieren (`StoreItems.json`, `Incidents.json`, `Traits.json`, `RaceSettings.json`, `Weather.json`, `CommandSettings.json`, `ActiveMods.json`) und committen. Bis dahin zeigt die Seite die Beispieldaten der Vorlage.
+4. **Anleitung ändern:** Abschnitt `<div id="anleitung">` in `index.html`. Zahlen dort (300 Pfennig je Stunde, Lootbox, Wettbonus) an die Einstellungen in RICS und der Mod anpassen, wenn sie sich ändern.
+
+Keine Zuschauerdaten in diesem Repository: Die JSON-Dateien oben enthalten nur Preise und Einstellungen, nicht `viewers.json`.
+
+---
+
 # RICS Price List
 
 A GitHub Pages site for displaying RICS mod purchase lists.
