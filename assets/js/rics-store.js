@@ -157,7 +157,7 @@ class RICSStore {
                 modactive: itemData.modactive === true   // NEW
             }))
             .filter(item => item.modactive)               // ← Only show active mods
-            .filter(item => (item.enabled || item.isUsable || item.isEquippable || item.isWearable))
+            .filter(item => item.enabled) // nur kaufbare Waren zeigen (Ausmisten, 20.11.2026)
             .filter(item => item.price > 0);
     }
 
