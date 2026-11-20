@@ -36,13 +36,8 @@
 
         <div class="tabs">
             <button class="tab-button active" data-tab="anleitung">So spielst du mit</button>
-            <button class="tab-button" data-tab="items">Items</button>
-            <button class="tab-button" data-tab="events">Ereignisse</button>
-            <button class="tab-button" data-tab="weather">Wetter</button>
-            <button class="tab-button" data-tab="traits">Traits</button>
-            <button class="tab-button" data-tab="races">Rassen</button>
-            <button class="tab-button" data-tab="commands">Befehle</button>
-			<button class="tab-button" data-tab="mods">Mods</button>
+            <button class="tab-button" data-tab="items">Laden</button>
+            <!-- Ereignisse, Wetter, Traits, Rassen, Befehle, Mods ausgeblendet (Ausmisten, 20.11.2026) -->
         </div>
 
         <div class="tab-content">
@@ -52,77 +47,57 @@
                     <h2>Kurz gesagt</h2>
                     <ul>
                         <li>Schreib im Chat, während RimWorld läuft – dann sammelst du <strong>Pfennig</strong>.</li>
-                        <li>Mit Pfennig kaufst du Items, Ereignisse, Wetter oder einen eigenen Kolonisten.</li>
-                        <li>Wichtigste Befehle: <code>!bal</code> (Guthaben), Käufe mit <code>$</code>, z. B. <code>$beer</code>, <code>!pawn</code>, <code>!joinqueue</code>, <code>!openlootbox</code>.</li>
-                        <li>Alle Preise stehen in den Reitern oben. Die Antworten im Chat sind kurz – Details findest du hier.</li>
+                        <li><strong>Kaufen:</strong> <code>$Dosenbrot</code>, <code>$Kartoffeln 10</code> … – der ganze Laden steht unten.</li>
+                        <li><strong>Mitspielen:</strong> <code>!pawn</code> für einen neuen Kolonisten oder <code>!joinqueue</code>, um einen vorhandenen zu übernehmen.</li>
+                        <li><strong>Antworten kommen im Spiel</strong> (Einblendung oben links im Stream), nicht im Chat. So bleibt der Chat frei.</li>
+                        <li>Mehr Befehle gibt es nicht – alles andere wird ignoriert.</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Pfennig verdienen</h2>
                     <ul>
-                        <li><strong>Aktiv sein:</strong> Wer in den letzten 30 Minuten etwas im Chat geschrieben hat, bekommt alle 2 Minuten Pfennig – rund <strong>300 Pfennig pro Stunde</strong> (eine „Zuschaustunde“).</li>
-                        <li><strong>Nur Zuschauen zählt nicht:</strong> Wer nie schreibt, bekommt nichts. Mehr Nachrichten bringen aber auch nicht mehr Pfennig – Spammen lohnt sich nicht.</li>
-                        <li><strong>Zuschlag</strong> für Abonnenten, VIPs und Moderatoren. Dein <strong>Karma</strong> wirkt als Faktor: gute Taten heben es, Gemeinheiten senken es.</li>
-                        <li><strong>Täglich eine Lootbox</strong> (<code>!openlootbox</code>): meist 25–150 Pfennig, mit Glück (1 zu 20) bis zu 750.</li>
-                        <li><strong>Wettbonus:</strong> Gewinnst du eine Twitch-Vorhersage, bekommst du für je 1000 ausgezahlte Kanalpunkte eine Zuschaustunde dazu. Verlierst du, verlierst du keine Pfennig. Twitch meldet nur die 10 Tipper mit dem höchsten Einsatz je Ausgang – nur sie bekommen den Bonus.</li>
+                        <li><strong>Aktiv sein:</strong> Wer in den letzten 30 Minuten etwas im Chat geschrieben hat, bekommt alle 2 Minuten Pfennig – rund <strong>300 Pfennig pro Stunde</strong>. Wer nie schreibt, bekommt nichts; mehr Nachrichten bringen aber auch nicht mehr.</li>
+                        <li><strong>Zuschlag</strong> für Abonnenten, VIPs und Moderatoren. Dein <strong>Karma</strong> wirkt als Faktor.</li>
+                        <li><strong>Tägliche Lootbox:</strong> Sie öffnet sich bei deinem ersten Befehl des Tages von selbst – meist 25–150 Pfennig, mit Glück (1 zu 20) bis zu 750.</li>
+                        <li><strong>Wettbonus:</strong> Gewinnst du eine Twitch-Vorhersage, bekommst du für je 1000 ausgezahlte Kanalpunkte eine Stunde Pfennig dazu. Verlieren kostet keine Pfennig. Twitch meldet nur die 10 Tipper mit dem höchsten Einsatz je Ausgang.</li>
                         <li>Pfennig gibt es nur, solange im Stream <strong>RimWorld</strong> läuft.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>Was kostet was?</h2>
+                    <h2>Der Laden</h2>
                     <table class="items-table guide-table">
-                        <thead><tr><th>Was</th><th>Etwa so lange zuschauen und schreiben</th></tr></thead>
+                        <thead><tr><th>Ware</th><th>So kaufst du</th><th>Höchstens je Kauf</th></tr></thead>
                         <tbody>
-                            <tr><td>Ein Bier</td><td>knapp eine halbe Stunde</td></tr>
-                            <tr><td>Ein Tier</td><td>ab einer Stunde</td></tr>
-                            <tr><td>Einen vorhandenen Kolonisten übernehmen</td><td>kostenlos über die Warteschlange (<code>!joinqueue</code>)</td></tr>
-                            <tr><td>Einen neuen Kolonisten kaufen (<code>!pawn</code>)</td><td>etwa zwei Stunden</td></tr>
+                            <tr><td>Dosenbrot</td><td><code>$Dosenbrot</code></td><td>3</td></tr>
+                            <tr><td>Rausch</td><td><code>$Rausch</code></td><td>2</td></tr>
+                            <tr><td>Ei</td><td><code>$Ei 6</code></td><td>12</td></tr>
+                            <tr><td>Kartoffeln</td><td><code>$Kartoffeln 10</code></td><td>30</td></tr>
+                            <tr><td>Flausch</td><td><code>$Flausch 10</code></td><td>25</td></tr>
+                            <tr><td>Holz vor der Hütte</td><td><code>$Holz vor der Hütte 20</code></td><td>50</td></tr>
                         </tbody>
                     </table>
-                    <p>Item-Preise richten sich nach dem Wert im Spiel; Waffen und Rüstungen sind entsprechend teurer. Genaue Preise: Reiter <em>Items</em>, <em>Ereignisse</em>, <em>Wetter</em>, <em>Traits</em> und <em>Rassen</em>. Im Chat hilft <code>!pricecheck item</code>.</p>
-                </section>
-
-                <section>
-                    <h2>Die wichtigsten Befehle</h2>
-                    <table class="items-table guide-table">
-                        <thead><tr><th>Befehl</th><th>Wozu</th></tr></thead>
-                        <tbody>
-                            <tr><td><code>!bal</code></td><td>Guthaben, Karma, offene Lootboxen</td></tr>
-                            <tr><td><code>!openlootbox</code></td><td>Lootbox öffnen</td></tr>
-                            <tr><td><code>$item [Anzahl]</code> oder <code>!buy item</code></td><td>Item kaufen, z. B. <code>$beer 2</code></td></tr>
-                            <tr><td><code>!equip</code>, <code>!wear</code>, <code>!backpack</code></td><td>direkt an deinen Kolonisten</td></tr>
-                            <tr><td><code>!pricecheck item</code></td><td>Preis nachsehen</td></tr>
-                            <tr><td><code>!event name</code>, <code>!weather art</code></td><td>Ereignis oder Wetter kaufen</td></tr>
-                            <tr><td><code>!pawn</code></td><td>neuen Kolonisten kaufen</td></tr>
-                            <tr><td><code>!joinqueue</code>, <code>!leavequeue</code>, <code>!queuestatus</code>, <code>!acceptpawn</code></td><td>Warteschlange, um einen vorhandenen Kolonisten zu übernehmen</td></tr>
-                            <tr><td><code>!mypawn health</code> u. a.</td><td>deinen Kolonisten ansehen</td></tr>
-                            <tr><td><code>!leave</code></td><td>deinen Kolonisten freigeben</td></tr>
-                            <tr><td><code>!giftcoins name betrag</code></td><td>Pfennig verschenken</td></tr>
-                            <tr><td><code>!purchaselist</code></td><td>Link zu dieser Seite</td></tr>
-                        </tbody>
-                    </table>
-                    <p>Alle Befehle mit Abklingzeit, Kosten und Berechtigung stehen im Reiter <em>Befehle</em>. Ausgegraute Befehle sind abgeschaltet.</p>
+                    <p>Die Zahl am Ende ist die Menge; ohne Zahl kaufst du eins. Preise: Reiter <em>Laden</em>. Ein Dosenbrot kostet knapp eine halbe Stunde Zuschauen. Nach jedem Kauf siehst du dein Guthaben in der Einblendung – auch wenn es nicht gereicht hat.</p>
                 </section>
 
                 <section>
                     <h2>Kolonisten</h2>
                     <ul>
-                        <li>Jede Person kann einen Kolonisten haben; er trägt deinen Twitch-Namen.</li>
-                        <li><strong>Übernehmen:</strong> Stell dich mit <code>!joinqueue</code> an. Der Streamer bietet freie Kolonisten an; nimm das Angebot mit <code>!acceptpawn</code> an, bevor es abläuft.</li>
-                        <li><strong>Neu kaufen:</strong> <code>!pawn</code> – Rasse und Xenotyp zeigt <code>!races</code> bzw. <code>!xenotypes</code>.</li>
-                        <li>Stirbt dein Kolonist, gib ihn mit <code>!leave</code> frei und hol dir einen neuen.</li>
+                        <li><strong>Neu dazukommen:</strong> <code>!pawn</code> kauft dir einen zufälligen Kolonisten, der deinen Namen trägt – für etwa zwei Stunden Zuschauen. Damit die Kolonie nicht überläuft, kommt <strong>höchstens alle 30 Minuten</strong> ein neuer dazu, für alle zusammen.</li>
+                        <li><strong>Vorhandenen übernehmen:</strong> kostenlos. Stell dich mit <code>!joinqueue</code> an; bietet der Streamer dir einen Kolonisten an, nimm ihn mit <code>!acceptpawn</code> an. <code>!queuestatus</code> zeigt deinen Platz, <code>!leavequeue</code> holt dich raus.</li>
+                        <li><code>!leave</code> gibt deinen Kolonisten wieder frei.</li>
+                        <li>Jede Person hat höchstens einen Kolonisten. Anpassen kannst du ihn (noch) nicht über den Chat.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>Limits und Regeln</h2>
+                    <h2>Regeln</h2>
                     <ul>
-                        <li>Befehle haben teils <strong>Abklingzeiten</strong> und Kauflimits (Reiter <em>Befehle</em>). Die Antwort sagt dir, wie lange du warten musst.</li>
+                        <li>Nur die Befehle auf dieser Seite funktionieren; alles andere wird ohne Antwort ignoriert.</li>
+                        <li>Bitte nicht spammen – jeder Befehl wirkt beim ersten Mal.</li>
                         <li>Mitspielen geht nur, solange im Stream RimWorld läuft.</li>
                         <li>Moderatoren können jemanden im Spiel pausieren oder sperren; der Twitch-Chat bleibt davon unberührt.</li>
-                        <li>Ereignisse wirken sich auf alle aus – bitte fair bleiben, sonst sinkt dein Karma.</li>
                     </ul>
                 </section>
 
@@ -134,9 +109,10 @@
                 <section>
                     <h2>Demnächst</h2>
                     <ul>
-                        <li>Twitch-Raids kommen im Spiel an – mal als Angriff, mal als Verbündete, Händler oder Besuch, manchmal entscheidet der Chat.</li>
-                        <li>Abstimmungen über Ereignisse direkt in Twitch.</li>
-                        <li>Preise, die mit der Nachfrage steigen und wieder fallen.</li>
+                        <li><strong>Ereignisse:</strong> Der Erzähler schlägt Ereignisse vor, der Chat stimmt per Twitch-Abstimmung ab.</li>
+                        <li><strong>Lebenslauf neuer Kolonisten</strong> per Abstimmung (z. B. Kämpfer, Schütze, Bauer, Baumeister).</li>
+                        <li><strong>Twitch-Raids</strong> kommen im Spiel an – mal als Angriff, mal als Verbündete, Händler oder Besuch.</li>
+                        <li>Befehle per Flüsternachricht an den Bot.</li>
                     </ul>
                 </section>
             </div>
@@ -144,16 +120,16 @@
             <!-- Items Tab -->
             <div id="items" class="tab-pane">
                 <div class="search-box">
-                    <input type="text" id="items-search" placeholder="Search items..." class="search-input">
+                    <input type="text" id="items-search" placeholder="Ware suchen …" class="search-input">
                 </div>
                 <div class="table-container">
                     <table id="items-table" class="items-table">
                         <thead>
                             <tr>
-                                <th data-sort="name">Name</th>
-                                <th data-sort="price">Price</th>
-                                <th data-sort="category">Category</th>
-                                <th data-sort="quantityLimit">Quantity Limit</th>
+                                <th data-sort="name">Ware</th>
+                                <th data-sort="price">Preis (Pfennig)</th>
+                                <th data-sort="category">Kategorie</th>
+                                <th data-sort="quantityLimit">Höchstens je Kauf</th>
                             </tr>
                         </thead>
                         <tbody id="items-tbody">

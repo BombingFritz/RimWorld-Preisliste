@@ -10,6 +10,8 @@
    nach `data/` kopieren (`StoreItems.json`, `Incidents.json`, `Traits.json`, `RaceSettings.json`, `Weather.json`, `CommandSettings.json`, `ActiveMods.json`) und committen. Bis dahin zeigt die Seite die Beispieldaten der Vorlage.
 4. **Anleitung ändern:** Abschnitt `<div id="anleitung">` in `index.html`. Zahlen dort (300 Pfennig je Stunde, Lootbox, Wettbonus) an die Einstellungen in RICS und der Mod anpassen, wenn sie sich ändern.
 
+Abweichungen von der Vorlage: Reiter „So spielst du mit“, nur die Reiter Anleitung und Laden sichtbar (die übrigen sind ausgeblendet), der Laden zeigt nur kaufbare Waren (`rics-store.js`, Filter `item.enabled`).
+
 Keine Zuschauerdaten in diesem Repository: Die JSON-Dateien oben enthalten nur Preise und Einstellungen, nicht `viewers.json`.
 
 ---
