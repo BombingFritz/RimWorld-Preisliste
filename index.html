@@ -36,6 +36,7 @@
 
         <div class="tabs">
             <button class="tab-button active" data-tab="anleitung">So spielst du mit</button>
+            <button class="tab-button" data-tab="regeln">Allgemeine Regeln</button>
             <button class="tab-button" data-tab="items">Laden</button>
             <!-- Ereignisse, Wetter, Traits, Rassen, Befehle, Mods ausgeblendet (Ausmisten, 20.11.2026) -->
         </div>
@@ -98,9 +99,8 @@
                     <h2>Regeln</h2>
                     <ul>
                         <li>Nur die Befehle auf dieser Seite funktionieren; alles andere wird ohne Antwort ignoriert.</li>
-                        <li>Bitte nicht spammen – jeder Befehl wirkt beim ersten Mal. Mehr als 5 Befehle in einer Minute oder mehr als 10 in 10 Minuten geben eine <strong>Verwarnung</strong>. Nach 3 Verwarnungen ignoriert dich der Bot bis zum Ende des Streams (keine Befehle, keine Pfennig). Im nächsten Stream fängst du wieder bei null an.</li>
-                        <li>Mitspielen geht nur, solange im Stream RimWorld läuft.</li>
-                        <li>Moderatoren können jemanden im Spiel pausieren oder sperren; der Twitch-Chat bleibt davon unberührt.</li>
+                        <li>Bitte nicht spammen: höchstens 5 Befehle pro Minute und 10 in 10 Minuten, sonst gibt es Verwarnungen.</li>
+                        <li>Alles Genaue – Spamschutz, Warteschlange, Abstimmungen, Raids – steht im Reiter <em>Allgemeine Regeln</em>.</li>
                     </ul>
                 </section>
 
@@ -112,12 +112,102 @@
                 <section>
                     <h2>Demnächst</h2>
                     <ul>
-                        <li><strong>Ereignisse:</strong> Der Erzähler schlägt Ereignisse vor, der Chat stimmt per Twitch-Abstimmung ab.</li>
                         <li><strong>Lebenslauf neuer Kolonisten</strong> per Abstimmung (z. B. Kämpfer, Schütze, Bauer, Baumeister).</li>
-                        <li><strong>Twitch-Raids</strong> kommen im Spiel an – mal als Angriff, mal als Verbündete, Händler oder Besuch.</li>
+                        <li><strong>Twitch-Raids</strong> nicht nur als Angriff, sondern auch als Verbündete, Händler oder Besuch.</li>
                         <li>Was mit einem freigegebenen Kolonisten passiert – als „Dulli“ bleiben oder in die Welt ziehen –, entscheidet der Chat per Abstimmung.</li>
                         <li>Befehle per Flüsternachricht an den Bot.</li>
                     </ul>
+                </section>
+            </div>
+
+            <div id="regeln" class="tab-pane guide">
+                <section class="guide-tldr">
+                    <h2>Allgemeine Regeln</h2>
+                    <p>Hier steht genau, wie das Mitspielen funktioniert. Die Kurzfassung findest du unter <em>So spielst du mit</em>.</p>
+                </section>
+
+                <section>
+                    <h2>Wann es läuft</h2>
+                    <ul>
+                        <li>Nur solange im Stream die Kategorie <strong>RimWorld</strong> läuft. Sonst nimmt das Spiel keine Befehle an und es gibt keine Pfennig.</li>
+                        <li>Antworten kommen als Einblendung im Spiel, nicht im Chat.</li>
+                        <li>Moderatoren und der Streamer sind von Befehlsliste und Spamschutz ausgenommen.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Befehle</h2>
+                    <table class="items-table guide-table">
+                        <thead><tr><th>Befehl</th><th>Wirkung</th></tr></thead>
+                        <tbody>
+                            <tr><td><code>$Ware Anzahl</code></td><td>kaufen, z. B. <code>$Kartoffeln 10</code> (Liste im Reiter <em>Laden</em>)</td></tr>
+                            <tr><td><code>!pawn</code></td><td>neuer zufälliger Kolonist mit deinem Namen</td></tr>
+                            <tr><td><code>!joinqueue</code></td><td>anstellen, um einen vorhandenen Kolonisten zu übernehmen</td></tr>
+                            <tr><td><code>!leave</code></td><td>deinen Kolonisten freigeben</td></tr>
+                            <tr><td><code>!joinraid</code></td><td>bei einem Twitch-Raid mitkommen</td></tr>
+                            <tr><td><code>!privat</code></td><td>aus dem Spiel heraushalten (an und aus)</td></tr>
+                        </tbody>
+                    </table>
+                    <p>Alle anderen Befehle werden ohne Antwort ignoriert.</p>
+                </section>
+
+                <section>
+                    <h2>Spamschutz</h2>
+                    <ul>
+                        <li>Gezählt wird jeder Befehl, auch ein nicht erlaubter.</li>
+                        <li>Mehr als <strong>5 Befehle in einer Minute</strong> oder mehr als <strong>10 in 10 Minuten</strong> geben eine Verwarnung; dieser Befehl zählt dann nicht.</li>
+                        <li>Nach der <strong>dritten Verwarnung</strong> ignoriert dich der Bot bis zum Ende des Streams: keine Befehle, keine Pfennig.</li>
+                        <li>Nach dem Stream sind alle Verwarnungen gelöscht.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Kolonisten</h2>
+                    <ul>
+                        <li>Jede Person hat zu jeder Zeit <strong>höchstens einen</strong> Kolonisten.</li>
+                        <li><strong>Neu:</strong> <code>!pawn</code> kostet etwa zwei Stunden Zuschauen. Höchstens alle 30 Minuten kommt ein neuer Kolonist dazu, für alle zusammen.</li>
+                        <li><strong>Übernehmen:</strong> <code>!joinqueue</code> ist kostenlos. Du stellst dich <strong>vorne</strong> an: Wird ein Kolonist frei, bekommt ihn die Person, die sich zuletzt angestellt hat – automatisch, ohne weiteren Befehl.</li>
+                        <li>Anstellen geht <strong>einmal pro Stream</strong>. Wer zu früh drängelt, wird von Späteren überholt. Nach dem Stream wird die Liste geleert.</li>
+                        <li><strong>Freigeben:</strong> Nach <code>!leave</code> bleibt dein Kolonist in der Kolonie und heißt ab dann „Dulli“. Wer so freigegeben hat, kann sich im selben Stream nicht noch einmal anstellen.</li>
+                        <li>Anpassen (Eigenschaften, Kleidung) geht nicht über den Chat.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Abstimmungen über Ereignisse</h2>
+                    <ul>
+                        <li>Der Erzähler schlägt Ereignisse vor, ihr stimmt per <strong>Twitch-Abstimmung</strong> ab. Sie dauert 2 Minuten.</li>
+                        <li>Zur Wahl stehen meist ein gutes, ein schlechtes und ein neutrales Ereignis sowie „Nichts passiert“ oder „Wetterwechsel“.</li>
+                        <li>Ganz verheerende und extrem gute Ereignisse kommen nicht vor.</li>
+                        <li>In der <strong>ersten Stunde</strong> eines Streams gibt es keine Abstimmung, danach etwa alle <strong>30 Minuten</strong>.</li>
+                        <li>Hat das Spiel gerade selbst etwas geschickt, wartet die Abstimmung, und auch der Gewinner kommt erst nach etwa 10 Minuten Ruhe.</li>
+                        <li>Was in einem Stream gewonnen hat, kommt in diesem Stream nicht noch einmal zur Wahl.</li>
+                        <li>Gleichstand: Das Los entscheidet.</li>
+                        <li>Bei etwa jeder dritten Abstimmung gibt es <strong>Zusatzstimmen für 3000 Kanalpunkte</strong>.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Twitch-Raids</h2>
+                    <ul>
+                        <li>Raidet uns ein Kanal, landet eine Gruppe im Spiel. Der Anführer heißt wie der raidende Kanal.</li>
+                        <li>Mitkommen: <code>!joinraid</code>, solange das Beitrittsfenster offen ist (einige Minuten). Wer in den 10 Minuten vor dem Raid im Chat geschrieben hat, ist automatisch dabei.</li>
+                        <li>Im Moment greift die Gruppe immer an. Später kommen auch Verbündete, Händler oder Besuch.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Pfennig</h2>
+                    <ul>
+                        <li>Etwa 300 Pfennig pro Stunde, wenn du in den letzten 30 Minuten geschrieben hast; mehr Nachrichten bringen nicht mehr.</li>
+                        <li>Tägliche Lootbox beim ersten Befehl des Tages, meist 25–150 Pfennig, mit Glück (1 zu 20) mehr.</li>
+                        <li>Wettbonus: Für je 1000 bei einer Twitch-Vorhersage gewonnene Kanalpunkte gibt es eine Stunde Pfennig dazu.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Datenschutz</h2>
+                    <p>Mit <code>!privat</code> spielst du in RimWorld nicht mit: Du bekommst keine Pfennig, keinen Kolonisten, trittst keinem Raid bei, und dein Name erscheint nicht im Spiel. Derselbe Befehl schaltet zurück.</p>
                 </section>
             </div>
 
