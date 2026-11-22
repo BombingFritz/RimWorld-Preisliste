@@ -85,8 +85,8 @@
                 </section>
 
                 <section>
-                    <h2>Killer-Kaninchen 🐇</h2>
-                    <p>Für die Hälfte eines neuen Kolonisten (gerade 300 Pfennig, etwa eine Stunde Zuschauen) hetzt du mit <code>$Killer-Kaninchen</code> ein Kaninchen mit deinem Namen auf die Kolonie. Die anderen haben 90 Sekunden Zeit, mit <code>!joinraid</code> als weitere Kaninchen mitzumachen. Wie viele angreifen, hängt davon ab, was die Kolonie gerade aushält – du bist immer dabei. Höchstens alle 20 Minuten.</p>
+                    <h2>Killerkaninchen 🐇</h2>
+                    <p>Für die Hälfte eines neuen Kolonisten (gerade 300 Pfennig, etwa eine Stunde Zuschauen) hetzt du mit <code>$Killerkaninchen</code> ein Kaninchen mit deinem Namen auf die Kolonie. Die anderen haben 90 Sekunden Zeit, mit <code>!joinraid</code> als weitere Kaninchen mitzumachen. Wie viele angreifen, hängt davon ab, was die Kolonie gerade aushält – du bist immer dabei. Höchstens alle 20 Minuten.</p>
                 </section>
 
                 <section>
@@ -107,6 +107,11 @@
                         <li>Bitte nicht spammen: höchstens 5 Befehle pro Minute und 10 in 10 Minuten, sonst gibt es Verwarnungen.</li>
                         <li>Alles Genaue – Spamschutz, Warteschlange, Abstimmungen, Raids – steht im Reiter <em>Allgemeine Regeln</em>.</li>
                     </ul>
+                </section>
+
+                <section>
+                    <h2>Karma</h2>
+                    <p>Was du tust, hat Folgen: Gute Einkäufe für die Kolonie heben dein Karma, Killerkaninchen und Angriffe senken es. Wer mit schlechtem Karma einen Kolonisten kauft, bekommt einen schwierigen. Und die ganze Kolonie hat ein eigenes Karma – wird es zu gut, schlägt das Schicksal zurück. Genaues im Reiter <em>Allgemeine Regeln</em>.</p>
                 </section>
 
                 <section>
@@ -149,7 +154,7 @@
                             <tr><td><code>!pawn</code></td><td>neuer zufälliger Kolonist mit deinem Namen</td></tr>
                             <tr><td><code>!joinqueue</code></td><td>anstellen, um einen vorhandenen Kolonisten zu übernehmen</td></tr>
                             <tr><td><code>!leave</code></td><td>deinen Kolonisten freigeben</td></tr>
-                            <tr><td><code>$Killer-Kaninchen</code></td><td>Killer-Kaninchen mit deinem Namen auf die Kolonie hetzen</td></tr>
+                            <tr><td><code>$Killerkaninchen</code></td><td>Killerkaninchen mit deinem Namen auf die Kolonie hetzen</td></tr>
                             <tr><td><code>!joinraid</code></td><td>bei einem Twitch-Raid oder Kaninchen-Angriff mitmachen</td></tr>
                             <tr><td><code>!privat</code></td><td>aus dem Spiel heraushalten (an und aus)</td></tr>
                         </tbody>
@@ -194,9 +199,9 @@
                 </section>
 
                 <section>
-                    <h2>Killer-Kaninchen</h2>
+                    <h2>Killerkaninchen</h2>
                     <ul>
-                        <li>Kaufen mit <code>$Killer-Kaninchen</code> (auch <code>$Kaninchen</code>) für die Hälfte eines neuen Kolonisten. Das Kaninchen trägt deinen Namen und greift die Kolonie an.</li>
+                        <li>Kaufen mit <code>$Killerkaninchen</code> für die Hälfte eines neuen Kolonisten. Das Kaninchen trägt deinen Namen und greift die Kolonie an.</li>
                         <li>90 Sekunden lang können andere mit <code>!joinraid</code> als weitere Kaninchen mitmachen; das kostet nichts.</li>
                         <li>Es greifen nur so viele an, wie die Kolonie gerade verkraftet. Wer kauft, ist immer dabei; unter den übrigen wird ausgelost.</li>
                         <li>Höchstens alle 20 Minuten ein Kaninchen-Angriff, immer nur einer gleichzeitig.</li>
@@ -210,6 +215,24 @@
                         <li>Mitkommen: <code>!joinraid</code>, solange das Beitrittsfenster offen ist (einige Minuten). Wer in den 10 Minuten vor dem Raid im Chat geschrieben hat, ist automatisch dabei.</li>
                         <li>Es kämpfen nur so viele Raider, wie ein normaler Angriff dieser Stärke hätte; der raidende Kanal ist immer dabei.</li>
                         <li>Im Moment greift die Gruppe immer an. Später kommen auch Verbündete, Händler oder Besuch.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Karma</h2>
+                    <p>Es gibt zwei Arten von Karma: deins und das der Kolonie.</p>
+                    <h3>Dein Karma</h3>
+                    <ul>
+                        <li>Jeder fängt mit 100 an (von 0 bis 200). Es sinkt mit der Zeit von selbst ein wenig.</li>
+                        <li>Ware für die Kolonie kaufen: <strong>+2</strong>. Killerkaninchen kaufen: <strong>−20</strong>. Bei Kaninchen mitmachen: <strong>−10</strong>. Mit <code>!joinraid</code> bei einem Raid gegen uns mitmachen: <strong>−10</strong>.</li>
+                        <li>Kaufst du einen Kolonisten, prägt dein Karma ihn: unter 40 hat er eine schlechte Eigenschaft und ist schwer krank, unter 70 hat er eine schlechte Eigenschaft, ab 160 eine gute.</li>
+                    </ul>
+                    <h3>Karma der Kolonie</h3>
+                    <ul>
+                        <li>Ein laufender Wert von −100 bis +100, egal wer gerade zuschaut. Er wandert langsam zurück zur Mitte, es zählt also vor allem, was zuletzt passiert ist.</li>
+                        <li>Er steigt mit allem Guten, das ihr der Kolonie gönnt (Waren, neue Kolonisten, gute Ereignisse in Abstimmungen), und fällt mit allem Schlechten (schlechte Ereignisse, Killerkaninchen, Raider – Raider zählen doppelt so viel wie Kaninchen).</li>
+                        <li><strong>Ausgleichende Gerechtigkeit:</strong> Ist das Karma der Kolonie sehr gut, kann in einer Abstimmung etwas Verheerendes zur Wahl stehen. Ist es sehr schlecht, ein Segen. Je weiter das Karma von der Mitte weg ist, desto eher. Ihr könnt es abwählen – aber dann bleibt das Karma, wie es ist.</li>
+                        <li>Den aktuellen Stand zeigt die Einblendung jeder Abstimmung.</li>
                     </ul>
                 </section>
 
